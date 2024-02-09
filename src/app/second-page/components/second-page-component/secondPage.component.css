@@ -21,9 +21,11 @@
   grid-row: 3 / 4;
 }
 
-/* .body {
-  width: 90%;
-} */
+.body {
+  /* width: 90%; */
+  max-height: 560px;
+  overflow-y: scroll;
+}
 
 .sidebar {
   background-color: #22d3ee;
