@@ -1,0 +1,41 @@
+.container {
+  border: 1px solid #9ca3af;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  grid-row: 1 / 2;
+}
+
+.body-container {
+  grid-row: 2 / 3;
+  background-color: #e5e7eb;
+  display: grid;
+  grid-template-columns: 1fr 160px;
+}
+
+.footer {
+  grid-row: 3 / 4;
+}
+
+/* .body {
+  width: 90%;
+} */
+
+.sidebar {
+  background-color: #22d3ee;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+
+  .body-container {
+    grid-template-columns: 1fr;
+  }
+}

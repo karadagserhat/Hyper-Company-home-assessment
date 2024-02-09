@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 10rem;
+  gap: 2rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  height: 600px;
+}
+
+.container::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.left {
+}
+
+.right {
+  flex: 1;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.items div {
+  display: flex;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 1px solid #9ca3af;
+  border-bottom: none;
+}
+
+.items div:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.title {
+  background-color: #f97316;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #9ca3af;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input[type="text"] {
+  display: flex;
+  height: 4rem;
+  border: 1px solid #9ca3af;
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.reset-button {
+  width: 100%;
+  background-color: #f97316;
+  border: 1px solid #9ca3af;
+}
+
+.submit-button {
+  border: 1px solid #9ca3af;
+  background-color: #f97316;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .items div {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 44px;
+    gap: 0;
+  }
+}

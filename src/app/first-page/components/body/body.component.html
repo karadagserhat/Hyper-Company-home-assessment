@@ -1,0 +1,73 @@
+@if(data$ | async; as data) {
+<div class="container">
+  <div class="left">
+    <div class="items">
+      @for(item of counter(data.colors.length); track item) {
+      <div
+        class="item-{{ item + 1 }}"
+        [ngStyle]="{ 'background-color': data.colors[item] }"
+        (click)="changeColor($event)"
+      >
+        item {{ item + 1 }}
+      </div>
+      }
+      <!-- <div
+        class="item-1"
+        [ngStyle]="{ 'background-color': data.colors[0] }"
+        (click)="changeColor($event)"
+      >
+        item 1
+      </div> -->
+    </div>
+  </div>
+  <div class="right">
+    <div class="title">One</div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="input">
+        <input
+          [(ngModel)]="textField1"
+          formControlName="text1"
+          type="text"
+          placeholder="name"
+        />
+        <input
+          [(ngModel)]="textField2"
+          formControlName="text2"
+          type="text"
+          placeholder="company"
+        />
+        <input
+          [(ngModel)]="textField3"
+          formControlName="text3"
+          type="text"
+          placeholder="category"
+        />
+        <input
+          [(ngModel)]="textField4"
+          formControlName="text4"
+          type="text"
+          placeholder="description"
+        />
+      </div>
+      <div class="buttons">
+        <button
+          type="button"
+          [disabled]="!(textField1 || textField2 || textField3 || textField4)"
+          class="reset-button"
+          (click)="onClickReset()"
+          [ngStyle]="{ 'background-color': data.selectedColor }"
+        >
+          RESET
+        </button>
+        <button
+          [disabled]="form.invalid || data.isSubmitting"
+          [ngStyle]="{ 'background-color': data.selectedColor }"
+          class="submit-button"
+        >
+          <div>SUBMIT</div>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+}

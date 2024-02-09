@@ -1,0 +1,28 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid #9ca3af;
+  border-top: none;
+  border-bottom: none;
+}
+
+a {
+  padding: 1rem 2rem;
+}
+
+.active-link,
+.active-link:link,
+.active-link:visited,
+.active-link:active {
+  border-radius: 0.4rem;
+  background-color: #06b6d4;
+  color: #082f49;
+}
+
+.active-link:hover {
+  opacity: 0.9;
+}
