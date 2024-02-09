@@ -16,7 +16,7 @@
 .body {
   flex: 1;
   max-height: 560px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .sidebar {
